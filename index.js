@@ -2,7 +2,7 @@
 const express = require("express");
 const methodOverride = require("method-override");
 
-const Villager = require('./PostgreSQL/villagerDAL');
+const Villager = require('./services/villagerDAL');
 
 const env = require('dotenv').config();
 
@@ -42,7 +42,9 @@ server.get("/search", async (req, res) => {
       console.log('findGiftsByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
       console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
     } else if (db === 'postgres') {
-      /*  BECK add Postgres Function here */
+      result = await Villager.findByName(name);
+      console.log('findByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
+      console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
     }
 
     res.render('results.ejs', { results: result }); /*  Render the results to the EJS file */
