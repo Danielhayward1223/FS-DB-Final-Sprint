@@ -7,7 +7,7 @@ server.get("/villagers/:name", async (req, res) => {
     try {
       const villager = await Villager.findByName(name);
       if (villager) {
-        res.render("villager.ejs", { villager });
+        res.render("results.ejs", { villager });
       } else {
         res.status(404).send("Villager not found");
       }

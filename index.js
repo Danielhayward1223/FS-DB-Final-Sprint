@@ -42,16 +42,24 @@ server.get("/search", async (req, res) => {
       console.log('findGiftsByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
       console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
     } else if (db === 'postgres') {
-      result = await Villager.findByName(name);
-      console.log('findByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
-      console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
+      const villager = await Villager.findByName(name);
+      result = {
+        name: villager.name,
+        gifts: {
+          loves: villager.loves,
+          likes: villager.likes,
+          dislikes: villager.dislikes,
+          hates: villager.hates,
+        },
+      };
+      console.log('findByName result:', result);
     }
 
     res.render('results.ejs', { results: result }); /*  Render the results to the EJS file */
-  } else {
-    res.render("search");
-  }
-});
+    } else {
+      res.render("search");
+    }
+  });
 
 // Define the output of the server
 
