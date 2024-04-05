@@ -43,8 +43,9 @@ server.get("/search", async (req, res) => {
       console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
     } else if (db === 'postgres') {
       const villager = await Villager.findByName(name);
-      result = {
+      result = {    /* Creates Data for the EJS and names it for proper formatting so the EJS can place the data. */
         name: villager.name,
+        birthday: villager.birthday,
         gifts: {
           loves: villager.loves,
           likes: villager.likes,
