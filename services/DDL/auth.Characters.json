@@ -1,0 +1,443 @@
+[
+	{
+		"_id": "1",
+		"name": "Alex",
+		"birthday": "Summer 13",
+		"gifts": {
+			"loves": [
+				"Complete Breakfast",
+				"Salmon Dinner",
+				"Jack be nimble, Jack be quick"
+			],
+			"likes": ["All Eggs", "Field Snack"],
+			"dislikes": ["All Books", "Salmonberry", "Wild Horseradish"],
+			"hates": ["Holly", "Quartz"]
+		}
+	},
+	{
+		"_id": "2",
+		"name": "Abigail",
+		"birthday": "Fall 13",
+		"gifts": {
+			"loves": [
+				"Amethyst",
+				"Banana Pudding",
+				"Blackberry Cobbler",
+				"Chocolate Cake",
+				"Monster Compendium",
+				"Pufferfish",
+				"Pumpkin",
+				"Spice Eek"
+			],
+			"likes": [
+				"Ancient Sword",
+				"Basilisk Paw",
+				"Bone Flute",
+				"Combat Quarterly",
+				"Quartz"
+			],
+			"dislikes": [
+				"All Eggs",
+				"All Fruit",
+				"All Vegetables",
+				"Sugar",
+				"Wild Horseradish"
+			],
+			"hates": ["Clay", "Quartz"]
+		}
+	},
+	{
+		"_id": "3",
+		"name": "Elliot",
+		"birthday": "Fall 5",
+		"gifts": {
+			"loves": [
+				"Crab Cakes",
+				"Duck Feather",
+				"Lobster",
+				"Pomegranate",
+				"Squid Ink",
+				"Tom Kha Soup"
+			],
+			"likes": ["All Books", "All Fruit", "Octopus", "Squid"],
+			"dislikes": [
+				"All Milk",
+				"Chanterelle",
+				"Common Mushroom",
+				"Daffodil",
+				"Dandelion",
+				"Ginger",
+				"Hazelnut",
+				"Holly",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Pizza",
+				"Purple Mushroom",
+				"Snow Yam",
+				"Wild Horseradish",
+				"Winter Root"
+			],
+			"hates": [
+				"Amaranth",
+				"Quartz",
+				"Salmonberry",
+				"Sea Cucumber",
+				"Super Cucumber"
+			]
+		}
+	},
+	{
+		"_id": "4",
+		"name": "Emily",
+		"birthday": "Spring 27",
+		"gifts": {
+			"loves": [
+				"Amethyst",
+				"Aquamarine",
+				"Cloth",
+				"Emerald",
+				"Jade",
+				"Ruby",
+				"Survival Burger",
+				"Topaz",
+				"Wool"
+			],
+			"likes": ["Daffodil", "Quartz"],
+			"dislikes": [
+				"Fried Eel",
+				"Ice Cream",
+				"Rice Pudding",
+				"Salmonberry",
+				"Spicy Eel"
+			],
+			"hates": ["Fish Taco", "Holly", "Maki Roll", "Salmon Dinner", "Sashimi"]
+		}
+	},
+	{
+		"_id": "5",
+		"name": "Harvey",
+		"birthday": "Winter 14",
+		"gifts": {
+			"loves": ["Coffee", "Pickles", "Super Meal", "Truffle Oil", "Wine"],
+			"likes": [
+				"All Fruit",
+				"Chanterelle",
+				"Common Mushroom",
+				"Daffodil",
+				"Dandelion",
+				"Duck Egg",
+				"Duck Feather",
+				"Ginger",
+				"Goat Milk",
+				"Hazelnut",
+				"Holly",
+				"Large Goat Milk",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Purple Mushroom",
+				"Quartz",
+				"Snow Yam",
+				"Spring Onion",
+				"Wild Horseradish",
+				"Winter Root"
+			],
+			"dislikes": [
+				"Blueberry Tart",
+				"Bread",
+				"Cheese",
+				"Chocolate Cake",
+				"Clam",
+				"Cookie",
+				"Cranberry Sauce",
+				"Fried Mushroom",
+				"Glazed Yams",
+				"Goat Cheese",
+				"Hashbrowns",
+				"Ice Cream",
+				"Pancakes",
+				"Pink Cake",
+				"Pizza",
+				"Rhubarb Pie",
+				"Rice Pudding"
+			],
+			"hates": [
+				"Coral",
+				"Nautilus Shell",
+				"Rainbow Shell",
+				"Salmonberry",
+				"Spice Berry"
+			]
+		}
+	},
+	{
+		"_id": "6",
+		"name": "Haley",
+		"birthday": "Spring 14",
+		"gifts": {
+			"loves": ["Coconut", "Fruit Salad", "Pink Cake", "Sunflower"],
+			"likes": ["Daffodil"],
+			"dislikes": [
+				"All Eggs",
+				"All Fruit",
+				"All Milk",
+				"All Vegetables",
+				"Chanterelle",
+				"Common Mushroom",
+				"Dandelion",
+				"Ginger",
+				"Hazelnut",
+				"Holly",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Purple Mushroom",
+				"Quartz",
+				"Snow Yam",
+				"Winter Root"
+			],
+			"hates": ["Clay", "Prismatic Shard", "Wild Horseradish"]
+		}
+	},
+	{
+		"_id": "7",
+		"name": "Sam",
+		"birthday": "Summer 17",
+		"gifts": {
+			"loves": ["Cactus Fruit", "Maple Bar", "Pizza", "Tigerseye"],
+			"likes": ["All Eggs", "Joja Cola"],
+			"dislikes": [
+				"All Vegetables",
+				"Chanterelle",
+				"Clam",
+				"Common Mushroom",
+				"Daffodil",
+				"Dandelion",
+				"Ginger",
+				"Hazelnut",
+				"Holly",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Purple Mushroom",
+				"Quartz",
+				"Salmonberry",
+				"Seaweed",
+				"Snow Yam",
+				"Wild Horseradish",
+				"Winter Root"
+			],
+			"hates": [
+				"Coal",
+				"Copper Bar",
+				"Duck Mayonnaise",
+				"Gold Bar",
+				"Gold Ore",
+				"Iridium Bar",
+				"Iridium Ore",
+				"Iron Bar",
+				"Mayonnaise",
+				"Pickles",
+				"Refined Quartz"
+			]
+		}
+	},
+	{
+		"_id": "8",
+		"name": "Leah",
+		"birthday": "Winter 23",
+		"gifts": {
+			"loves": [
+				"Goat Cheese",
+				"Poppyseed Muffin",
+				"Salad",
+				"Stir Fry",
+				"Truffle",
+				"Vegetable Medley",
+				"Wine"
+			],
+			"likes": [
+				"All Eggs",
+				"All Fruit",
+				"All Milk",
+				"Chanterelle",
+				"Common Mushroom",
+				"Daffodil",
+				"Dandelion",
+				"Driftwood",
+				"Ginger",
+				"Hazelnut",
+				"Holly",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Purple Mushroom",
+				"Snow Yam",
+				"Spring Onion",
+				"Wild Horseradish",
+				"Winter Root"
+			],
+			"dislikes": [
+				"All Foraged Minerals",
+				"All Gems",
+				"Carp Surprise",
+				"Clam",
+				"Cookie",
+				"Fried Egg",
+				"Ice Cream",
+				"Pink Cake",
+				"Rice Pudding",
+				"Seaweed",
+				"Survival Burger",
+				"Tortilla"
+			],
+			"hates": ["Bread", "Hashbrowns", "Pancakes", "Pizza", "Void Egg"]
+		}
+	},
+	{
+		"_id": "9",
+		"name": "Sebastian",
+		"birthday": "Winter 10",
+		"gifts": {
+			"loves": [
+				"Frozen Tear",
+				"Obsidian",
+				"Pumpkin Soup",
+				"Sashimi",
+				"Void Egg"
+			],
+			"likes": ["Combat Quarterly", "Flounder", "Monster Compendium", "Quartz"],
+			"dislikes": [
+				"All Flowers",
+				"Chanterelle",
+				"Common Mushroom",
+				"Daffodil",
+				"Dandelion",
+				"Ginger",
+				"Hazelnut",
+				"Holly",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Purple Mushroom",
+				"Salmonberry",
+				"Snow Yam",
+				"Wild Horseradish",
+				"Winter Root"
+			],
+			"hates": [
+				"Clay",
+				"Complete Breakfast",
+				"Farmer's Lunch",
+				"Omelet",
+				"Pina Colada"
+			]
+		}
+	},
+	{
+		"_id": "10",
+		"name": "Maru",
+		"birthday": "Summer 10",
+		"gifts": {
+			"loves": [
+				"Battery Pack",
+				"Cauliflower",
+				"Cheese Cauliflower",
+				"Diamond",
+				"Gold Bar",
+				"Iridium Bar",
+				"Miner's Treat",
+				"Pepper Poppers",
+				"Radioactive Bar",
+				"Rhubarb Pie",
+				"Strawberry"
+			],
+			"likes": [
+				"Chanterelle",
+				"Copper Bar",
+				"Iron Bar",
+				"Oak Resin",
+				"Pine Tar",
+				"Quartz",
+				"Radioactive Ore"
+			],
+			"dislikes": [
+				"Blackberry",
+				"Common Mushroom",
+				"Crystal Fruit",
+				"Maple Syrup",
+				"Salmonberry"
+			],
+			"hates": ["Holly", "Honey", "Pickles", "Snow Yam", "Truffle"]
+		}
+	},
+	{
+		"_id": "11",
+		"name": "Shane",
+		"birthday": "Spring 20",
+		"gifts": {
+			"loves": ["Beer", "Hot Pepper", "Pepper Poppers", "Pizza"],
+			"likes": ["All Eggs", "All Fruit"],
+			"dislikes": [
+				"Chanterelle",
+				"Common Mushroom",
+				"Daffodil",
+				"Dandelion",
+				"Ginger",
+				"Hazelnut",
+				"Holly",
+				"Leek",
+				"Magma Cap",
+				"Morel",
+				"Purple Mushroom",
+				"Seaweed",
+				"Snow Yam",
+				"Wild Horseradish",
+				"Winter Root"
+			],
+			"hates": ["Pickles", "Quartz"]
+		}
+	},
+	{
+		"_id": "12",
+		"name": "Penny",
+		"birthday": "Fall 2",
+		"gifts": {
+			"loves": [
+				"All Books",
+				"Diamond",
+				"Emerald",
+				"Melon",
+				"Poppy",
+				"Poppyseed Muffin",
+				"Red Plate",
+				"Roots Platter",
+				"Sandfish",
+				"Tom Kha Soup"
+			],
+			"likes": ["All Milk", "All Artifacts", "Dandelion", "Leek"],
+			"dislikes": [
+				"Algae Soup",
+				"Duck Feather",
+				"Pale Broth",
+				"Purple Mushroom",
+				"Quartz",
+				"Red Mushroom",
+				"Salmonberry",
+				"Wool"
+			],
+			"hates": [
+				"Beer",
+				"Grape",
+				"Holly",
+				"Hops",
+				"Mead",
+				"Pale Ale",
+				"Pina Colada",
+				"Rabbit's Foot",
+				"Wine"
+			]
+		}
+	}
+]
