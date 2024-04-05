@@ -42,14 +42,24 @@ server.get("/search", async (req, res) => {
       console.log('findGiftsByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
       console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
     } else if (db === 'postgres') {
-      /*  BECK add Postgres Function here */
+      result = await Villager.findByName(name); 
+      console.log('PostgreSQL result:', result);
     }
 
-    res.render('results.ejs', { results: result }); /*  Render the results to the EJS file */
+     // Log search query
+     const logEntry = `Search query: ${name}, Database: ${db}, Results: ${result.length}\n`;
+     fs.appendFile('search_logs.txt', logEntry, (err) => {
+       if (err) {
+         console.error('Error logging search:', err);
+       }
+     });
+
+    res.render('results.ejs', { results: result });
   } else {
     res.render("search");
   }
 });
+
 
 // Define the output of the server
 
