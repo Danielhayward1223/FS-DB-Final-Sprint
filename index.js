@@ -2,7 +2,9 @@
 const express = require("express");
 const methodOverride = require("method-override");
 
+const Villager = require('./services/villagerDAL');
 
+const env = require('dotenv').config();
 
 
 // Initialize express server
@@ -25,7 +27,6 @@ server.use(express.json());
 /* findGiftsByName function import from (m.characters.dal) */
 
 const { findGiftsByName } = require("./services/m.characters.dal");
-const Villager = require('./services/villagerDAL');
 
 
 /* Search route being defined */
