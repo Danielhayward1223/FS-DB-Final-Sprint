@@ -6,6 +6,8 @@ const Villager = require('./PostgreSQL/villagerDAL');
 
 const env = require('dotenv').config();
 
+const fs = require('fs');
+
 
 // Initialize express server
 const server = express();
