@@ -2,6 +2,7 @@
 
 /* Import Requirements */
 const { MongoClient } = require("mongodb");
+require('dotenv').config();
 
 /* Create MDB Local Environment for MDB instance */
 const uri = process.env.MDBLOCAL;
