@@ -2,6 +2,7 @@ const pool = require('./dbConfig');
 
 const Villager = {
   async findByName(name) {
+
     console.log("Searching for villager with name:", name, "...");
     const query = 'SELECT * FROM villagers WHERE name = $1';
     try {
@@ -11,6 +12,7 @@ const Villager = {
     catch (error) {
       console.error("Error:", error);
     }
+
   },
 };
 

@@ -1,1 +1,2 @@
-Search query: Alex, Database: mongo, Results: undefined
+
+Search query: Alex, Database: mongo, Results: undefined, Gifts: {"loves":["Complete Breakfast","Salmon Dinner","Jack be nimble, Jack be quick"],"likes":["All Eggs","Field Snack"],"dislikes":["All Books","Salmonberry","Wild Horseradish"],"hates":["Holly","Quartz"]}
