@@ -1,3 +1,4 @@
 Search query: Alex, Database: postgres, Results: undefined
 Search query: Alex, Database: postgres, Results: undefined
 Search query: Abigail, Database: postgres, Results: undefined
+Search query: Alex, Database: mongo, Results: undefined
