@@ -4,6 +4,8 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
+const env = require("dotenv").config();
+
 const fs = require("fs");
 
 // Initialize express server
@@ -168,18 +170,6 @@ server.get("/", (req, res) => {
 server.get("/villagers/:name", async (req, res) => {
 	try {
 		const name = req.params.name;
-		const villager = await Villager.findByName(name);
-		if (villager) {
-			res.render("test.ejs", { villager });
-		} else {
-			res.status(404).send("Villager not found");
-		}
-	} catch (error) {
-		console.error("Error retrieving villager:", error);
-		res.status(500).send("Internal Server Error");
-	}
-	const name = req.params.name;
-	try {
 		const villager = await Villager.findByName(name);
 		if (villager) {
 			res.render("result.ejs", { villager });
