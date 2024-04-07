@@ -4,7 +4,8 @@ const methodOverride = require("method-override");
 
 
 const env = require("dotenv").config();
-const Villager = require("./PostgreSQL/villagerDAL");
+
+
 const fs = require("fs");
 
 // Initialize express server
@@ -26,6 +27,8 @@ server.use(express.json());
 
 const { findGiftsByName } = require("./services/m.characters.dal");
 
+
+
 const Villager = require("./services/villagerDAL");
 
 /* Search route being defined */
@@ -33,6 +36,22 @@ server.get("/search", async (req, res) => {
 	const name = req.query.name;
 	const db = req.query.db;
 
+
+	if (name && db) {
+		let result = [];
+
+		if (db === "mongo") {
+			result = await findGiftsByName(name);
+		} else if (db === "postgres") {
+			result = await Villager.findByName(name);
+		}
+
+		// Log search query
+		// Log search query
+		const logEntry = `Search query: ${name}, Database: ${db}, Results: ${
+			result ? JSON.stringify(result.gifts) : "undefined"
+		}\n`;
+		fs.appendFile("search_logs.txt", logEntry, (err) => {
     if (db === 'mongo') {
       result = await findGiftsByName(name);
       console.log('findGiftsByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
@@ -66,8 +85,6 @@ server.get("/search", async (req, res) => {
 
 
 
-
-
 // Define the output of the server
 
 server.get("/", (req, res) => {
@@ -76,8 +93,7 @@ server.get("/", (req, res) => {
 
 // Define route for viewing a specific villager
 server.get("/villagers/:name", async (req, res) => {
-
-  const name = req.params.name;
+	const name = req.params.name;
   try {
     const villager = await Villager.findByName(name);
     if (villager) {
@@ -89,6 +105,7 @@ server.get("/villagers/:name", async (req, res) => {
     console.error("Error retrieving villager:", error);
     res.status(500).send("Internal Server Error");
   }
+
 });
 
 // Start the express server
