@@ -2,10 +2,9 @@
 const express = require("express");
 const methodOverride = require("method-override");
 
-const Villager = require("./PostgreSQL/villagerDAL");
 
 const env = require("dotenv").config();
-
+const Villager = require("./PostgreSQL/villagerDAL");
 const fs = require("fs");
 
 // Initialize express server
@@ -27,45 +26,13 @@ server.use(express.json());
 
 const { findGiftsByName } = require("./services/m.characters.dal");
 
-const Villager = require('./services/villagerDAL');
-
+const Villager = require("./services/villagerDAL");
 
 /* Search route being defined */
 server.get("/search", async (req, res) => {
 	const name = req.query.name;
 	const db = req.query.db;
 
-	if (name && db) {
-		let result = [];
-
-		if (db === "mongo") {
-			result = await findGiftsByName(name);
-			console.log(
-				"findGiftsByName result:",
-				result
-			); /* Debug and Log to see if Data is being displayed from Function */
-			console.log(
-				"results to be sent to EJS:",
-				result
-			); /* Debug and Log to see if Data is going through to EJS */
-		} else if (db === "postgres") {
-			result = await Villager.findByName(name);
-			console.log("PostgreSQL result:", result);
-		}
-
-		// Log search query
-		const logEntry = `Search query: ${name}, Database: ${db}, Results: ${result.length}\n`;
-		fs.appendFile("search_logs.txt", logEntry, (err) => {
-			if (err) {
-				console.error("Error logging search:", err);
-			}
-		});
-
-		res.render("results.ejs", { results: result });
-	} else {
-		res.render("search");
-	}
-});
     if (db === 'mongo') {
       result = await findGiftsByName(name);
       console.log('findGiftsByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
@@ -84,12 +51,22 @@ server.get("/search", async (req, res) => {
       };
       console.log('findByName result:', result);
     }
+    	const logEntry = `Search query: ${name}, Database: ${db}, Results: ${result.length}\n`;
+		  fs.appendFile("search_logs.txt", logEntry, (err) => {
+			if (err) {
+				console.error("Error logging search:", err);
+			}
+		});
 
     res.render('results.ejs', { results: result }); /*  Render the results to the EJS file */
     } else {
       res.render("search");
     }
   });
+
+
+
+
 
 // Define the output of the server
 
@@ -99,18 +76,7 @@ server.get("/", (req, res) => {
 
 // Define route for viewing a specific villager
 server.get("/villagers/:name", async (req, res) => {
-	const name = req.params.name;
-	try {
-		const villager = await Villager.findByName(name);
-		if (villager) {
-			res.render("test.ejs", { villager });
-		} else {
-			res.status(404).send("Villager not found");
-		}
-	} catch (error) {
-		console.error("Error retrieving villager:", error);
-		res.status(500).send("Internal Server Error");
-	}
+
   const name = req.params.name;
   try {
     const villager = await Villager.findByName(name);
