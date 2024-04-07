@@ -4,7 +4,6 @@ const methodOverride = require("method-override");
 
 
 const env = require("dotenv").config();
-const Villager = require("./PostgreSQL/villagerDAL");
 const fs = require("fs");
 
 // Initialize express server
@@ -30,40 +29,42 @@ const Villager = require("./services/villagerDAL");
 
 /* Search route being defined */
 server.get("/search", async (req, res) => {
-	const name = req.query.name;
-	const db = req.query.db;
+    const name = req.query.name;
+    const db = req.query.db;
+    let result;
 
     if (db === 'mongo') {
-      result = await findGiftsByName(name);
-      console.log('findGiftsByName result:', result);  /* Debug and Log to see if Data is being displayed from Function */
-      console.log('results to be sent to EJS:', result); /* Debug and Log to see if Data is going through to EJS */
+        result = await findGiftsByName(name);
+        console.log('findGiftsByName result:', result);
+        console.log('results to be sent to EJS:', result);
     } else if (db === 'postgres') {
-      const villager = await Villager.findByName(name);
-      result = {    /* Creates Data for the EJS and names it for proper formatting so the EJS can place the data. */
-        name: villager.name,
-        birthday: villager.birthday,
-        gifts: {
-          loves: villager.loves,
-          likes: villager.likes,
-          dislikes: villager.dislikes,
-          hates: villager.hates,
-        },
-      };
-      console.log('findByName result:', result);
+        const villager = await Villager.findByName(name);
+        result = {
+            name: villager.name,
+            birthday: villager.birthday,
+            gifts: {
+                loves: villager.loves,
+                likes: villager.likes,
+                dislikes: villager.dislikes,
+                hates: villager.hates,
+            },
+        };
+        console.log('findByName result:', result);
     }
-    	const logEntry = `Search query: ${name}, Database: ${db}, Results: ${result.length}\n`;
-		  fs.appendFile("search_logs.txt", logEntry, (err) => {
-			if (err) {
-				console.error("Error logging search:", err);
-			}
-		});
 
-    res.render('results.ejs', { results: result }); /*  Render the results to the EJS file */
+    const logEntry = `Search query: ${name}, Database: ${db}, Results: ${result ? result.length : 0}, Gifts: ${JSON.stringify(result ? result.gifts : {})}\n`;
+    fs.appendFile("search_logs.txt", logEntry, (err) => {
+        if (err) {
+            console.error("Error logging search:", err);
+        }
+    });
+
+    if (result) {
+        res.render('results.ejs', { results: result });
     } else {
-      res.render("search");
+        res.render("search");
     }
-  });
-
+});
 
 
 
