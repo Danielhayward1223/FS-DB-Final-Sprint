@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include('partials/head.ejs') %>
-	<body>
-		<%- include('partials/nav.ejs') %>
-		<div>
-			<h1>Search Results</h1>
-			<% console.log('results:', results) %> <% // Log 'results' object %> <% if
-			(results && results.gifts) { %>
-			<h2><%= results.name %></h2>
-			<% for (const category in results.gifts) { %>
-			<h3><%= category.toUpperCase() %></h3>
-			<ul>
-				<% results.gifts[category].forEach(gift => { %>
-				<li><%= gift %></li>
-				<% }) %>
-			</ul>
-			<% } %> <% } else { %>
-			<p>No results found.</p>
-			<% } %>
-		</div>
-	</body>
-	<%- include('partials/foot.ejs') %>
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/nav.ejs') %>
+        <div>
+            <h1>Search Results</h1>
+            <% console.log('results:', results) %> <% // Log 'results' object %> <% if (results && results.gifts) { %>
+            <h2>Name: <%= results.name %></h2>
+            <h2>Birthday: <%= results.birthday %></h2>
+            <% for (const category in results.gifts) { %>
+            <h3><%= category.toUpperCase() %></h3>
+            <ul>
+                <% results.gifts[category].forEach(gift => { %>
+                <li><%= gift %></li>
+                <% }) %>
+            </ul>
+            <% } %> <% } else { %>
+            <p>No results found.</p>
+            <% } %>
+        </div>
+    </body>
+    <%- include('partials/foot.ejs') %>
 </html>

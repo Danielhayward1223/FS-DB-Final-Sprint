@@ -5,6 +5,7 @@ const pool = new Pool({
   host: 'localhost',
   database: 'StardewVillagers',
   password: 'Keyin2021',
+  password: 'password',
   port: 5432,
 });
 
