@@ -37,21 +37,15 @@ server.get("/search", async (req, res) => {
 
 		if (db === "mongo") {
 			result = await findGiftsByName(name);
-			console.log(
-				"findGiftsByName result:",
-				result
-			); /* Debug and Log to see if Data is being displayed from Function */
-			console.log(
-				"results to be sent to EJS:",
-				result
-			); /* Debug and Log to see if Data is going through to EJS */
 		} else if (db === "postgres") {
 			result = await Villager.findByName(name);
-			console.log("PostgreSQL result:", result);
 		}
 
 		// Log search query
-		const logEntry = `Search query: ${name}, Database: ${db}, Results: ${result.length}\n`;
+		// Log search query
+		const logEntry = `Search query: ${name}, Database: ${db}, Results: ${
+			result ? JSON.stringify(result.gifts) : "undefined"
+		}\n`;
 		fs.appendFile("search_logs.txt", logEntry, (err) => {
 			if (err) {
 				console.error("Error logging search:", err);
@@ -63,7 +57,6 @@ server.get("/search", async (req, res) => {
 		res.render("search");
 	}
 });
-
 // Define the output of the server
 
 server.get("/", (req, res) => {
