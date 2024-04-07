@@ -159,6 +159,7 @@ server.get("/search", async (req, res) => {
     }
 });
 
+
 // Define the output of the server
 
 server.get("/", (req, res) => {
