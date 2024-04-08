@@ -2,7 +2,7 @@
 
 /* Import Requirements */
 const { MongoClient } = require("mongodb");
-require('dotenv').config();
+require("dotenv").config();
 
 /* Create MDB Local Environment for MDB instance */
 const uri = process.env.MDBLOCAL;
@@ -12,11 +12,11 @@ const client = new MongoClient(uri);
 
 client.connect();
 
-if (DEBUG) console.log("Connection to MongoDB established...");
+console.log("Connection to MongoDB established...");
 const dal = {
-	collection: function (collection) {
-		return client.db().collection(collection);
-	},
+  collection: function (collection) {
+    return client.db().collection(collection);
+  },
 };
 
 module.exports = dal;

@@ -1,0 +1,44 @@
+[
+  {
+    "_id": {
+      "$oid": "66147f9635080547556b55b9"
+    },
+    "username": "admin",
+    "password": "$2b$10$0ApbQX.OZm5qNYheUNy35O3W.Z0XOs6qg1fhEnqmKpj3V7fgDjmdi"
+  },
+  {
+    "_id": {
+      "$oid": "66147fc735080547556b55ba"
+    },
+    "username": "Dave",
+    "password": "$2b$10$RW1cdGh5bSvE7v3WTQactOYYWtl1ci8AS9HeK966WwgZm7FoUMomS"
+  },
+  {
+    "_id": {
+      "$oid": "66147fd535080547556b55bb"
+    },
+    "username": "Robert",
+    "password": "$2b$10$o2C5kX4u.9XUPsGn0.BSyeksAUqkf7u0jilRk3q1/c7x9A4Hfn7CG"
+  },
+  {
+    "_id": {
+      "$oid": "66147fec35080547556b55bc"
+    },
+    "username": "Austin",
+    "password": "$2b$10$w9ZrKt/0ux.2tbjMuut/0OmfZQYTobdPA2SHJ9s3qE4JqUOwYZyli"
+  },
+  {
+    "_id": {
+      "$oid": "66147ff435080547556b55bd"
+    },
+    "username": "Beck",
+    "password": "$2b$10$BDOyKrJpudUJhzhVsPxFXOqI/LgnlBSDAhfOHPA9AxFUMjLxy.SEK"
+  },
+  {
+    "_id": {
+      "$oid": "6614800f35080547556b55be"
+    },
+    "username": "Daniel",
+    "password": "$2b$10$/7rtYazCPRlA1OPnrSFyaumdLYYqqhgiQfo3EdoUWBxnbMwcY/lPS"
+  }
+]
