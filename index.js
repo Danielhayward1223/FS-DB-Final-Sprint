@@ -5,7 +5,7 @@ const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const env = require("dotenv").config();
-
+const { createUser } = require("./services/m.logins.dal"); 
 const fs = require("fs");
 
 // Initialize express server
@@ -94,6 +94,21 @@ server.get("/login", (req, res) => {
 	res.render("logins", { error: req.query.error });
 });
 
+/*  Create a GET route for the registry EJS */
+
+server.get("/register", (req, res) => {
+	res.render("register");
+});
+
+/* Setup a POST for the Registry Route */
+
+server.post("/register", async (req, res) => {
+	const {username, password} = req.body;
+	const hashedPassword = await bcrypt.hash(password, 10);
+	await createUser(username, hashedPassword);
+	res.redirect("/login");
+});
+
 /*  Set up post for the login page, that allows a redirect to the search if Login can be validated */
 server.post("/login", async (req, res) => {
 	try {
@@ -120,7 +135,7 @@ const { findGiftsByName } = require("./services/m.characters.dal");
 
 const Villager = require("./services/villagerDAL");
 
-/* Search route being defined */
+
 /* Search route being defined */
 server.get("/search", async (req, res) => {
     const name = req.query.name;

@@ -23,5 +23,21 @@ async function validatePassword(user, password) {
     return match;
 }
 
+async function createUser(username, password) {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = {
+        username: username,
+        password: hashedPassword,
+    };
+    try {
+        const result = await dal.collection("Users").insertOne(newUser);
+        console.log("User Created:", result);
+        return result;
+    } catch (err) {
+        console.error("Error:", err);
+        return null;
+    }
+}
 
-module.exports = { findUserByUsername, validatePassword };
+
+module.exports = { findUserByUsername, validatePassword, createUser };
