@@ -114,8 +114,8 @@ server.post("/register", async (req, res) => {
     res.redirect("/register?error=Username already exists.");
   } else {
     createUser(username, password);
+    res.redirect("/login");
   }
-  res.redirect("/login");
 });
 
 /*  Set up post for the login page, that allows a redirect to the search if Login can be validated */
