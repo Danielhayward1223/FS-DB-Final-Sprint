@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+    <body>
+        <%- include('partials/nav.ejs') %>
+        <div>
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </body>
+    <%- include('partials/foot.ejs') %>
+</html>

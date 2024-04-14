@@ -3,3 +3,5 @@ Search query: Alex, Database: mongo, Results: undefined, Gifts: {"loves":["Compl
 Search query: Abigail, Database: mongo, Results: undefined, Gifts: {"loves":["Amethyst","Banana Pudding","Blackberry Cobbler","Chocolate Cake","Monster Compendium","Pufferfish","Pumpkin","Spice Eek"],"likes":["Ancient Sword","Basilisk Paw","Bone Flute","Combat Quarterly","Quartz"],"dislikes":["All Eggs","All Fruit","All Vegetables","Sugar","Wild Horseradish"],"hates":["Clay","Quartz"]}
 
 Search query: Alex, Database: mongo, Results: undefined, Gifts: {"loves":["Complete Breakfast","Salmon Dinner","Jack be nimble, Jack be quick"],"likes":["All Eggs","Field Snack"],"dislikes":["All Books","Salmonberry","Wild Horseradish"],"hates":["Holly","Quartz"]}
+Search query: undefined, Database: undefined, Results: 0, Gifts: {}
+Search query: undefined, Database: undefined, Results: 0, Gifts: {}
